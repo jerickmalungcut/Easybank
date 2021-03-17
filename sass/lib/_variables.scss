@@ -1,0 +1,22 @@
+//Fonts
+$font-main: 'Public Sans', sans-serif;
+$font-bold: 700;
+$font-regular: 400;
+$font-light: 300;
+
+//Colors
+$color-primary: hsl(233, 26%, 24%);
+$color-secondary: hsl(136, 65%, 51%);
+$color-tertiary: hsl(192, 70%, 51%);
+
+$color-greyish-blue: hsl(233, 8%, 62%);
+$color-light-grayish-blue: hsl(220, 16%, 96%);
+$color-light-gray: hsl(0, 0%, 98%);
+$color-white: #fff;
+$color-gradient: linear-gradient(to right, $color-secondary, $color-tertiary);
+$color-gradient-2: linear-gradient(to right, $color-tertiary, $color-secondary);
+
+//Media Queries
+$desktop: 1440px;
+$tablet: 834px;
+$phone: 514px;

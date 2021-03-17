@@ -1,0 +1,97 @@
+.nav {
+    background-color: $color-white;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    font-size: 1.4rem;
+    z-index: 99;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+
+    @include tablet {
+        padding: 2rem 3rem;
+    }
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+
+    @include tablet {
+        position: absolute;
+        top: 12rem;
+        left: -100%;
+        transform: translateX(-50%);
+        width: 80%;
+        background-color: $color-white;
+        flex-direction: column;
+        display: none;
+        visibility: hidden;
+        transition: all .5s;
+    }
+
+    li {
+        &:not(:last-child) {
+            margin-right: 3.3rem;
+        }
+        
+        @include tablet {
+            margin: 2rem;
+        }
+
+        a {
+            color: $color-greyish-blue;
+            transition: all .2s;
+            font-weight: $font-regular;
+
+            &:hover {
+                color: $color-primary;
+            }
+        }
+    }
+}
+
+.nav-link.active {
+    display: flex;
+    visibility: visible;
+    left: 50%;
+}
+
+.logo {
+    display: inline-block;
+    padding: 1rem 0;
+}
+
+.burger {
+    display: none;
+    visibility: hidden;
+    cursor: pointer;
+
+    @include tablet {
+        display: block;
+        visibility: visible;
+    }
+
+    .close {
+        display: none;
+        visibility: hidden;
+    }
+
+    &.active {
+        .close {
+            display: block;
+            visibility: visible;
+        }
+
+        .hamburger {
+            display: none;
+            visibility: hidden;
+        }
+    }
+}
